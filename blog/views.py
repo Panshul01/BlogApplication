@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Post
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.views.generic import ListView
  
  
 def post_list(request):
@@ -32,7 +33,7 @@ def post_detail(request, year, month, day, post):
                   {'post': post})
 
 
-from django.views.generic import ListView
+
  
  
 class PostListView(ListView):
